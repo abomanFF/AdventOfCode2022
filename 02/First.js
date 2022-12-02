@@ -3,7 +3,6 @@ var rules = {
   Y: { point: 2, win: "A", loss: "C" },
   Z: { point: 3, win: "B", loss: "A" },
 };
-
 document
   .getElementsByTagName("pre")[0]
   .textContent.replaceAll(/\s/g, "")
