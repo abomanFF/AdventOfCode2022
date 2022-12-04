@@ -9,11 +9,12 @@ document
       end: parseInt(b.split("-")[1]),
     }))
   )
-  .reduce((a, pair) => {
-    if (
-      (pair[0].start >= pair[1].start && pair[0].end <= pair[1].end) ||
-      (pair[1].start >= pair[0].start && pair[1].end <= pair[0].end)
-    )
-      a++;
-    return a;
-  }, 0);
+  .reduce(
+    (a, pair) =>
+      (a =
+        (pair[0].start >= pair[1].start && pair[0].end <= pair[1].end) ||
+        (pair[1].start >= pair[0].start && pair[1].end <= pair[0].end)
+          ? a + 1
+          : a),
+    0
+  );
