@@ -2,7 +2,7 @@
 
 namespace AdventOfCode2022._01;
 
-public class Tests : BaseTest
+public class Day1 : BaseTest
 {
     private int Solve(string input) => input
             .Split($"{Environment.NewLine}{Environment.NewLine}")
