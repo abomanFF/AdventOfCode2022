@@ -23,28 +23,28 @@ public class Day8 : BaseTest
             //For each column
             for(int j = 1; j < currentRow.Count()-1; j++)
             {
-                var leftSmaller = currentRow.GetRange(0, j).FirstOrDefault(c => c >= currentRow[j], -1) == -1;
+                bool leftSmaller = currentRow.GetRange(0, j).FirstOrDefault(c => c >= currentRow[j], -1) == -1;
                 if (leftSmaller)
                 {
                     visibleTrees++;
                     continue;
                 }
 
-                var rightSmaller = currentRow.GetRange(j+1, currentRow.Count()-1-j).FirstOrDefault(c => c >= currentRow[j], -1) == -1;
+                bool rightSmaller = currentRow.GetRange(j+1, currentRow.Count()-1-j).FirstOrDefault(c => c >= currentRow[j], -1) == -1;
                 if (rightSmaller)
                 {
                     visibleTrees++;
                     continue;
                 }
 
-                var topSmaller = grid.GetRange(0, i).FirstOrDefault(topRow => topRow[j] >= currentRow[j], null) == null;
+                bool topSmaller = grid.GetRange(0, i).FirstOrDefault(topRow => topRow[j] >= currentRow[j], null) == null;
                 if (topSmaller)
                 {
                     visibleTrees++;
                     continue;
                 }
 
-                var bottomSmaller = grid.GetRange(i+1, grid.Count()-1-i).FirstOrDefault(bottomRow =>  bottomRow[j] >= currentRow[j], null) == null;
+                bool bottomSmaller = grid.GetRange(i + 1, grid.Count() - 1 - i).FirstOrDefault(bottomRow => bottomRow[j] >= currentRow[j], null) == null;
                 if (bottomSmaller)
                 {
                     visibleTrees++;
