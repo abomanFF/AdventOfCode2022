@@ -2,7 +2,7 @@
 
 internal class BridgeRunner
 {
-    public int Solve(string input, int tails)
+    internal int Solve(string input, int tails)
     {
         List<Coordinates> saved = new List<Coordinates>();
         List<Coordinates> knots = new List<Coordinates>(new Coordinates[1 + tails]).Select(n => new Coordinates()).ToList();

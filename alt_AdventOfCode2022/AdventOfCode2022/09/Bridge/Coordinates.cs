@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022._09.Bridge;
 
-public class Coordinates
+internal class Coordinates
 {
     public int X { get; set; }
     public int Y { get; set; }
