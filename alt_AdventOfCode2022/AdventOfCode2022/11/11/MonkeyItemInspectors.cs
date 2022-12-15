@@ -21,6 +21,7 @@ public class Monkey
         FalseMonkey = int.Parse(monkeyRows[5].Split(" ").Last());
         InspectedItemCount = 0;
     }
+
     public List<long> Items { get; set; }
     public string Operation { get; set; }
     public int Divisible { get; set; }
@@ -68,8 +69,8 @@ public class MonkeyItemInspectors
             });
         }
       
-        monkeys = monkeys.OrderByDescending(m => m.InspectedItemCount).ToList();
-        return Math.BigMul(monkeys[0].InspectedItemCount, monkeys[1].InspectedItemCount);
+        var result = monkeys.OrderByDescending(m => m.InspectedItemCount);
+        return Math.BigMul(result.First().InspectedItemCount, result.ElementAt(1).InspectedItemCount);
     }
 
 }
