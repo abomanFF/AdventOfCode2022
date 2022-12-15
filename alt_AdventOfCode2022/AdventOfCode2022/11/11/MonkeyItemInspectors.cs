@@ -44,8 +44,6 @@ public class MonkeyItemInspectors
 {
     public long Solve(string input, int nrOfRounds, long worryDivider = 1)
     {
-        Console.WriteLine(long.MaxValue);
-
         var monkeys = input.Split($"{Environment.NewLine}{Environment.NewLine}")
             .Select(rm => new Monkey(rm))
             .ToList();
@@ -72,5 +70,4 @@ public class MonkeyItemInspectors
         var result = monkeys.OrderByDescending(m => m.InspectedItemCount);
         return Math.BigMul(result.First().InspectedItemCount, result.ElementAt(1).InspectedItemCount);
     }
-
 }
