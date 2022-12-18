@@ -5,7 +5,7 @@ namespace AdventOfCode2022._08;
 
 public class Day8 : BaseTest
 {
-    public int Solve(string input)
+    internal int Solve(string input)
     {
 
         var grid = input.Split(Environment.NewLine)
@@ -56,7 +56,7 @@ public class Day8 : BaseTest
         return visibleTrees;
     }
 
-    public int Solve2(string input)
+    internal int Solve2(string input)
     {
 
         var grid = input.Split(Environment.NewLine)

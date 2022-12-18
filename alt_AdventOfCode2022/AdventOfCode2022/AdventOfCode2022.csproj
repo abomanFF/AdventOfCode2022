@@ -21,6 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="12\Data.in" />
+    <None Remove="12\TestData.in" />
     <None Remove="11\Data.in" />
     <None Remove="11\TestData.in" />
     <None Remove="10\Data.in" />
@@ -41,6 +43,12 @@
     <Folder Include="Base\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="12\Data.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TestData.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="11\Data.in">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

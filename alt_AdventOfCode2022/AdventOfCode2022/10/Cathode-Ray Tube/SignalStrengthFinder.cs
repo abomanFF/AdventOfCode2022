@@ -14,7 +14,7 @@ internal class SignalStrengthFinder
     private const string ADDX_COMMAND = "addx";
     private const string NOOP_COMMAND = "noop";
 
-    public SignalStrengthFinder()
+    internal SignalStrengthFinder()
     {
         CycleDictionary= new Dictionary<string, int> { 
             {NOOP_COMMAND, 1 },

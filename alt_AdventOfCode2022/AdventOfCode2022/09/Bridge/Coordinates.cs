@@ -2,7 +2,7 @@
 
 internal class Coordinates
 {
-    public int X { get; set; }
-    public int Y { get; set; }
-    public bool IsAdjacentTo(Coordinates other) => Math.Abs(other.X - X) <= 1 && Math.Abs(other.Y - Y) <= 1;
+    internal int X { get; set; }
+    internal int Y { get; set; }
+    internal bool IsAdjacentTo(Coordinates other) => Math.Abs(other.X - X) <= 1 && Math.Abs(other.Y - Y) <= 1;
 }
